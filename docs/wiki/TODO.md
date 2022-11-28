@@ -1,0 +1,3 @@
+- [ ] Read the following articles
+    - https://opensource.com/article/18/8/what-how-makefile
+    - https://makefiletutorial.com/

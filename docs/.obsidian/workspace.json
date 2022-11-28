@@ -1,0 +1,161 @@
+{
+  "main": {
+    "id": "3afd7bfe36a26b5e",
+    "type": "split",
+    "children": [
+      {
+        "id": "971d06285dcca69a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "40b2c7edb9839af9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "The Operating System.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "08ba739b0308fd04",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "3270ae4cc916bc8a",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ff2d51f617153de7",
+    "type": "split",
+    "children": [
+      {
+        "id": "511381b545fbbf23",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0c58e9a896902d2a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "edb75208f250deae",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "4c3d489e64ed9413",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "right": {
+    "id": "e484de96cfff7439",
+    "type": "split",
+    "children": [
+      {
+        "id": "04dc8349362c7fe4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "28f53b2ebfd3820c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "The Operating System.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "bcd9d5348b729915",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "The Operating System.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "8ec42b575ddc648d",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "bdd4ba087360ee70",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "The Operating System.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "40b2c7edb9839af9",
+  "lastOpenFiles": [
+    "Untitled.md",
+    "The Operating System.md"
+  ]
+}

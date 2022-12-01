@@ -1,0 +1,5 @@
+AS=as
+
+ASFLAGS = --32
+LDFLAGS = -melf_i386
+CXXFLAGS += -m32

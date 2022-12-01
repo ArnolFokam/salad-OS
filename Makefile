@@ -10,7 +10,8 @@ CP=cp
 BASH=bash
 MKDIR=mkdir -p
 
-include $(shell find $(ROOTDIR)/configs -name '*.mk')
+CONFIG := i386
+include $(ROOTDIR)/configs/$(CONFIG).mk
 
 GRUB_MKRESCUE = $(shell command -v grub2-mkrescue 2> /dev/null)
 ifeq ($(GRUB_MKRESCUE),)

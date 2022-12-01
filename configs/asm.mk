@@ -1,3 +1,0 @@
-AS=as
-
-ASFLAGS = --32

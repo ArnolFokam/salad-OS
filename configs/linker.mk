@@ -1,1 +1,0 @@
-LDFLAGS = -melf_i386

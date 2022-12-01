@@ -16,3 +16,8 @@ $(dirs): $(patsubst %/, %/Makefile, $(dirs))
 
 %.o: %.s
 	as $(ASFLAGS) -o $@ $<
+
+.PHONY: clean
+clean: param = clean
+clean: $(dirs)
+	@$(RM) $(objs) $(elf) builtin.o

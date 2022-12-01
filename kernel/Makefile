@@ -9,3 +9,7 @@ $(dirs): $(patsubst %/, %/Makefile, $(dirs))
 .PHONY: arch/
 arch/: $(dirs-y) arch/Makefile
 	@$(MAKE) -C $@ $(param)
+
+.PHONY: clean
+clean: param = clean
+clean: $(dirs) arch/

@@ -9,7 +9,6 @@ VERSION=0.0.1
 CP=cp
 BASH=bash
 MKDIR=mkdir -p
-ECHO=echo
 
 include $(shell find $(ROOTDIR)/configs -name '*.mk')
 
@@ -20,9 +19,14 @@ endif
 
 DESTDIR = $(ROOTDIR)/sysroot
 
-.PHONY: build-kernel
+clean-all: clean-kernel
+
+.PHONY: build-kernel clean-kernel
 build-kernel:
-	@$(MAKE) -C $(ROOTDIR)/kernel/
+	$(MAKE) -C $(ROOTDIR)/kernel/
+
+clean-kernel:
+	$(MAKE) -C $(ROOTDIR)/kernel/ clean
 
 .PHONY: iso/kernel.elf.gz
 iso/kernel.elf.gz: build-kernel
@@ -32,3 +36,6 @@ iso/kernel.elf.gz: build-kernel
 
 salados.i386.iso: iso/kernel.elf.gz
 	$(GRUB_MKRESCUE) -d /usr/lib/grub/i386-pc/ -o salados.i386.iso iso/
+
+.PHONY: clean
+clean: clean-all

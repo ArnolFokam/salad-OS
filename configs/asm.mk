@@ -1,0 +1,1 @@
+ASMPARAMS = --32

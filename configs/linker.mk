@@ -1,0 +1,1 @@
+LDPARAMS = -melf_i386

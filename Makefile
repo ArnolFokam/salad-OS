@@ -1,7 +1,9 @@
 export
 
-SRCDIR != pwd
+
 # build info
+SRCDIR != pwd
+DESTDIR = $(SRCDIR)/sysroot
 ARCH=i386
 VERSION=0.0.1
 

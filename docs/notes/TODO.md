@@ -1,3 +1,4 @@
+- [ ] Implement conditional build based on architecture
 - [ ] Complete kernel/core/main.cpp
 - [ ] Complete kernel/arch/i384/kernel.i386.ld
 - [ ] Complete kernel/arch/i384/boot/multiboot.s

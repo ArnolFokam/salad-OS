@@ -13,7 +13,7 @@ CXXFLAGS += \
 	-I$(PDIR)/include \
 	-I$(PDIR)
 
-dirs-y = core/
+dirs-y = core/ arch/
 
 all: $(dirs-y)
 

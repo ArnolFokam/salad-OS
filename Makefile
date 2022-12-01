@@ -13,6 +13,13 @@ BASH=bash
 ECHO=echo
 RM=rm
 
+ifeq ($(CONFIG),)
+CONFIG := i386
+endif
+
+# include configuration files
+include $(SRCDIR)/configs/$(CONFIG).mk
+
 # check if the command 'grub2-mkrescue' is available
 GRUB_MKRESCUE = $(shell command -v grub2-mkrescue 2> /dev/null)
 

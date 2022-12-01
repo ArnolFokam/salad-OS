@@ -1,1 +1,1 @@
-objs += boot.o
+objs += multiboot.o

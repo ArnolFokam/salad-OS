@@ -5,17 +5,17 @@ CWD != realpath --relative-to=$(ROOTDIR) .
 all: builtin.o $(elf)
 
 builtin.o: $(objs) $(dirs)
-	@$(LD) $(LDFLAGS) -r $(objs) $(patsubst %/, %/builtin.o, $(dirs)) -o builtin.o; 
+	$(LD) $(LDFLAGS) -r $(objs) $(patsubst %/, %/builtin.o, $(dirs)) -o builtin.o; 
 
 .PHONY: $(dirs)
 $(dirs): $(patsubst %/, %/Makefile, $(dirs))
-	@$(MAKE) -C $@ $(param)
+	$(MAKE) -C $@ $(param)
 
 %.o: %.cpp
-	@$(CXX) -c $(CPPFLAGS) $(CXXFLAGS) $^ -o $@
+	$(CXX) -c $(CPPFLAGS) $(CXXFLAGS) $^ -o $@
 
 %.o: %.s
-	as $(ASFLAGS) -o $@ $<
+	$(AS) $(ASFLAGS) -o $@ $<
 
 .PHONY: clean
 clean: param = clean

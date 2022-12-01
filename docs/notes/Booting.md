@@ -1,0 +1,15 @@
+- When the computer is boot up, the firmware is copied from the bios to RAM at a specific location.
+	- *The firmware is the sotfware store in the non-volatile part of the computer (BIOS) that tell it what to do when it is turned on.*
+- The program counter of the CPU will now point at this location to execute the instruction of the firmware.
+- Generally, the firmaware instructions tells the CPU to load the Operating System from master boot record into the RAM.
+	- *The Master Boot Record is the first sector of a hard disk. It identifies how and where the OS is located in oder to be bootded into the computer's memory.*
+- We have a jump instruction to the bootloader location of the OS in the RAM.
+- Then, the OS excutes the bootloader.
+- The bootloader is sophisticated piece of software which is mostly located at `/boot/grub/grub.cfg` and contains information about the available operating system to boot from (for dual boot and other cases) and the partition where they are found.
+- When you select an OS to load from the bootloader. When we select the os of choice, the bootloader load the kernel into the RAM and make the CPU jump to the this kernel's main entry point. Check [multiboot.s](https://github.com/ArnolFokam/salad-OS/blob/main/kernel/arch/i386/boot/multiboot.s) to see how this is done.
+- For various x86 systems, a multiboot specification of GRUB is implemented such that the kernel will never be loaded unless it is compiles with the multiboot specifications.
+	- A magic field (0x1badb002)
+	- An arbitrary flag flied
+	- A checsum field that yields 0 when added to the two previous field
+	[more here](https://stackoverflow.com/questions/34183799/how-does-this-assembly-bootloader-code-work)
+- Also, according to the [multiboot specification](https://wiki.osdev.org/Multiboot) the bootloader stores a multiboot structure containing information about the size of the RAM and stores a pointer to that in the **ax** register as well as the magic number into the **bx** register.

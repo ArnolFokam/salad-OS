@@ -19,6 +19,7 @@ GRUB_MKRESCUE = grub-mkrescue
 endif
 
 DESTDIR = $(ROOTDIR)/sysroot
+BUILDDIR != pwd
 
 clean-all: clean-kernel
 
@@ -35,7 +36,7 @@ iso/kernel.elf.gz: build-kernel
 	$(CP) kernel/arch/$(ARCH)/kernel-$(VERSION).$(ARCH) iso/kernel.elf
 	gzip -f iso/kernel.elf
 
-salados.i386.iso: iso/kernel.elf.gz
+i386.iso: iso/kernel.elf.gz
 	$(GRUB_MKRESCUE) -d /usr/lib/grub/i386-pc/ -o salados.i386.iso iso/
 
 .PHONY: clean

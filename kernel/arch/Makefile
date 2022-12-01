@@ -2,10 +2,7 @@ include Build.mk
 
 CWD != realpath --relative-to=$(ROOTDIR) .
 
-all: builtin.o $(elf)
-
-builtin.o: $(objs) $(dirs)
-	$(LD) $(LDFLAGS) -r $(objs) $(patsubst %/, %/builtin.o, $(dirs)) -o builtin.o; 
+all: $(dirs)
 
 .PHONY: $(dirs)
 $(dirs): $(patsubst %/, %/Makefile, $(dirs))

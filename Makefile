@@ -4,9 +4,11 @@
 export
 
 ROOTDIR != pwd
+ARCH=i386
+VERSION=0.0.1
 
 include $(shell find $(ROOTDIR)/configs -name '*.mk')
 
 .PHONY: build-kernel
 build-kernel:
-	$(MAKE) -C $(ROOTDIR)/kernel/
+	@$(MAKE) -C $(ROOTDIR)/kernel/

@@ -1,1 +1,1 @@
-LDPARAMS = -melf_i386
+LDFLAGS = -melf_i386

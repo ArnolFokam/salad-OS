@@ -1,1 +1,1 @@
-dirs += core
+dirs += core/

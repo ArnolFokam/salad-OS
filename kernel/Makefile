@@ -1,14 +1,11 @@
-export
-
 include Build.mk
 
-all: $(dirs)
+all: $(dirs) arch/
 
+.PHONY: $(dirs)
 $(dirs): $(patsubst %/, %/Makefile, $(dirs))
-	$(MAKE) -C $@ $(param)
+	@$(MAKE) -C $@ $(param)
 
-%.o: %.cpp
-	$(CXX) - c $(CPPFLAGS) $(CXXFLAGS) $^ -o $@
-
-%.o: %.s
-	as $(ASFLAGS) -o $@ $<
+.PHONY: arch/
+arch/: $(dirs-y) arch/Makefile
+	@$(MAKE) -C $@ $(param)

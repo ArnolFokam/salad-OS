@@ -6,3 +6,6 @@ export
 ROOTDIR != pwd
 
 include $(shell find $(ROOTDIR)/configs -name '*.mk')
+
+all:
+	$(MAKE) -C src/

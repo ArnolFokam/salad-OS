@@ -1,1 +1,1 @@
-ASMPARAMS = --32
+ASFLAGS = --32

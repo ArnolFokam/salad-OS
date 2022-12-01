@@ -12,4 +12,4 @@
 - We have a jump instruction to the bootloader location of the OS in the RAM.
 - Then, the OS excutes the bootloader.
 - The bootloader is sophisticated piece of software which is mostly located at `/boot/grub/grub.cfg` and contains information about the available operating system to boot from (for dual boot and other cases) and the partition where they are found.
-- When you select an OS to load from the bootloader. It will load the kernel of the OS into the RAM and make the CPU jump to the this kernel's location.
+- When you select an OS to load from the bootloader. When we select the os of choice, the bootloader load the kernel into the RAM and make the CPU jump to the this kernel's main entry point.

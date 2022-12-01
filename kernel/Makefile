@@ -1,7 +1,11 @@
-all: builtin.o $(elf)
+export
+
+include Build.mk
+
+all: $(dirs)
 
 $(dirs): $(patsubst %/, %/Makefile, $(dirs))
-	@$(MAKE) -C $@ $(param)
+	$(MAKE) -C $@ $(param)
 
 %.o: %.cpp
 	$(CXX) - c $(CPPFLAGS) $(CXXFLAGS) $^ -o $@

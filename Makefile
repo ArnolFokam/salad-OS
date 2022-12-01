@@ -7,5 +7,6 @@ ROOTDIR != pwd
 
 include $(shell find $(ROOTDIR)/configs -name '*.mk')
 
-all:
-	$(MAKE) -C src/
+.PHONY: build-kernel
+build-kernel:
+	$(MAKE) -C $(ROOTDIR)/kernel/

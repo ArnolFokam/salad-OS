@@ -13,3 +13,4 @@
 	- A checsum field that yields 0 when added to the two previous field
 	[more here](https://stackoverflow.com/questions/34183799/how-does-this-assembly-bootloader-code-work)
 - Also, according to the [multiboot specification](https://wiki.osdev.org/Multiboot) the bootloader stores a multiboot structure containing information about the size of the RAM and stores a pointer to that in the **ax** register as well as the magic number into the **bx** register.
+- Note: At this point, you wont be able to work on **.cpp** files using standard libraries like `iostream` etc. This is beacuse these libraries uses stuffs like **glibc** (for Linux) internally through dynamic linking made in the operating system. By we can't use the operating system to build the operating system,

@@ -3,12 +3,3 @@ ENTRY(main)
 INPUT(boot/builtin.o ../../core/builtin.o)
 OUTPUT_ARCH(i386:i386)
 OUTPUT(kernel.elf)
-
-SECTIONS
-{
-    . = 0x100000;
-
-    /DISCARD/ : {
-        *(.*)
-    }
-}

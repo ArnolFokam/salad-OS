@@ -1,5 +1,13 @@
+PDIR := $(ROOTDIR)/kernel
+
 AS=as
 
-ASFLAGS = --32
 LDFLAGS = -melf_i386
-CXXFLAGS += -m32
+
+ASFLAGS += --32 \
+	-I. \
+	-I$(PDIR)/include
+
+CXXFLAGS += -m32 \
+	-I. \
+	-I$(PDIR)/include

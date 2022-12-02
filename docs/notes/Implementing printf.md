@@ -1,0 +1,2 @@
+- There is a specific memory in your RAM (0xb8000) that your graphical processing unit monitors in order to display on the screen whatever value is present in that location.
+- In addition to that, we can also set the background and foreground color of the printed area by setting the value of these memory locations.
